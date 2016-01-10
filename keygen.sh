@@ -8,6 +8,8 @@ if [ ! -f "$PRIVATE_KEY" ]; then
   chmod 700 $KEYS_PATH
   chmod 644 $PUBLIC_KEY
   chmod 600 $PRIVATE_KEY
+  echo "Host *" > ~/.ssh/config
+  echo "  StrictHostKeyChecking no" >> ~/.ssh/config
 fi
 
 echo "========= PUBLIC KEY ============"
